@@ -12,13 +12,13 @@ Stress testing is one of the many different types of load testing.
 
 While load testing is primarily concerned with assessing the systems performance, the purpose of stress testing is to assess the availability and stability of the system under heavy load.
 
+https://k6.io/docs/test-types/stress-testing/
+
 ## Spike (spike-testing.js)
 
 Spike testing is a variation of a stress testing, but it does not gradually increase the load. Instead it spikes to extreme load over a very short period of time.
 
 https://k6.io/docs/test-types/stress-testing/#spike-testing-in-k6
-
-https://k6.io/docs/test-types/stress-testing/
 
 ## Soak (soak-testing.js)
 
