@@ -1,5 +1,5 @@
 import http from 'k6/http';
-import { sleep } from 'k6';
+import { sleep, check } from 'k6';
 
 export let options = {
     insecureSkipTLSVerify: true,
@@ -17,7 +17,10 @@ export let options = {
 const API_BASE_URL = "https://localhost:7024"
 
 export default () => {
-    http.get(`${API_BASE_URL}/WeatherForecast`);
+    var result = http.get(`${API_BASE_URL}/WeatherForecast`);
+
+    check(result, { "status was 200": (r) => r.status == 200 });
+
     sleep(1);
 };
 

@@ -6,7 +6,7 @@ export let options = {
     noConnectionReuse: false,
     stages: [
         { duration: '2m', target: 400 }, // ramp-up to 400 users
-        { duration: '2m', target: 400 }, // stay at 400 users for ~4 hours
+        { duration: '3h56m', target: 400 }, // stay at 400 users for ~4 hours
         { duration: '2m', target: 0 }, // ramp-down to 0 users (optional)
     ]
 };
